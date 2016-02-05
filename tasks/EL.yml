@@ -2,22 +2,6 @@
 - name: install chronos
   package: state=present name=chronos
 
-- name: create /etc/chronos/conf
-  file: >-
-    owner=root
-    group=root
-    mode=644
-    path=/etc/chronos/conf
-    state=directory
-    
-- name: install /etc/chronos/conf/* files
-  template: >
-    src=etc/chronos/conf/{{item}}.j2
-    dest=/etc/chronos/conf/{{item}}
-    owner=root
-    group=root
-    mode=0644
-  with_items:
-    - hostname
+- include: write-configs.yml
     
 
