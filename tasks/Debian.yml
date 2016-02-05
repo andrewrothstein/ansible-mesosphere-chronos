@@ -3,7 +3,7 @@
   file: >-
     owner=root
     group=root
-    mode="go-w"
+    mode=644
     path=/etc/chronos/conf
     state=directory
     
@@ -13,12 +13,10 @@
     dest=/etc/chronos/conf/{{item}}
     owner=root
     group=root
-    mode=0644
+    mode=644
   with_items:
     - hostname
     
 - name: install chronos
-  apt: state=present name={{item}}
-  with_items:
-    - chronos
+  package: state=present name=chronos
 
