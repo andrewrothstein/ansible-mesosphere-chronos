@@ -16,3 +16,5 @@
     mode=644
   with_items:
     - hostname
+    - http_port
+    - https_port

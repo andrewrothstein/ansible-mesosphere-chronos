@@ -1,0 +1,5 @@
+---
+mesosphere_chronos_zk_clientPort : 2181
+mesosphere_chronos_zk_iface : eth0
+mesosphere_chronos_http_port : 4400
+mesosphere_chronos_https_port : 4443
